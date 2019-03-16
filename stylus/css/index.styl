@@ -1,2 +1,522 @@
-body,html
-  overflow hidden
+@import "reset.css"
+@import "mixins.styl"
+.app
+  width 100%
+  height 100%
+  background #eeeeee
+  position relative
+  .login
+    position absolute
+    left 0
+    top 0
+    bottom 0
+    right 0
+    margin auto
+    background-color #ffffff
+    z-index 300
+    .login-inner
+      width 80%
+      height 440px
+      margin 0 auto
+      padding-top 60px
+      box-sizing border-box
+      .login-header
+        width 100%
+        h2
+          font-size 40px
+          font-weight 700
+          color #02a774
+          text-align center
+        .login-duanxin
+          display flex
+          width 100%
+          padding-top 40px
+          justify-content space-around
+          padding-left 35px
+          box-sizing border-box
+          a
+            font-size 14px
+            position relative
+            &.on
+              font-weight 700
+              color #02a774
+              &::before
+                content ''
+                display block
+                width 100%
+                position absolute
+                left 0
+                top 20px
+                background-color #02a774
+                height 2px
+
+
+
+
+
+
+    .form-iphon
+      .login-message
+        margin-top: 16px;
+        height: 48px;
+        font-size: 14px;
+        background: #fff;
+        input
+          width: 100%;
+          height: 100%;
+          padding-left: 10px;
+          box-sizing: border-box;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          outline: 0;
+          font: 400 14px Arial;
+        .get_verification
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          border: 0;
+          color: #ccc;
+          font-size: 14px;
+          background: transparent;
+
+
+
+      .login_verification
+        input
+          width: 100%;
+          height: 100%;
+          padding-left: 10px;
+          box-sizing: border-box;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          outline: 0;
+          font: 400 14px Arial;
+      .login_hint
+        margin-top: 12px;
+        color: #999;
+        font-size: 14px;
+        line-height: 20px;
+      .login_submit
+        display: block;
+        width: 100%;
+        height: 42px;
+        margin-top: 30px;
+        border-radius: 4px;
+        background: #4cd96f;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        line-height: 42px;
+        border: 0;
+      .about_us
+        display: block;
+        font-size: 12px;
+        margin-top: 20px;
+        text-align: center;
+        color: #999;
+  .wai
+    width 100%
+    height 100%
+    position relative
+    section
+      width 100%
+      height 100%
+      display none
+      position relative
+      header
+        width 100%
+        height 45px
+        background-color #02a774
+        position fixed
+        left 0
+        top 0
+        z-index 10
+        .header-login
+          position absolute
+          right 15px
+          top:50%
+          transform:translateY(-50%)
+          color #ffffff
+        .header-search
+          position absolute
+          top 50%
+          left 15px
+          transform:translateY(-50%)
+          width 10%
+          height 50%
+          color #ffffff
+          .icon-sousuo
+            font-size 25px
+            color #ffffff
+        .header-title
+          position absolute
+          top 50%
+          left 50%
+          transform:translate(-50%,-50%)
+          width 50%
+          color #ffffff
+          text-align center
+          .site
+            font-size 20px
+      .shop
+        width 100%
+        margin-top 15px
+        background-color #ffffff
+        .fujin
+          width 100%
+          display flex
+          padding-top 10px
+          box-sizing border-box
+          span
+            color #999999
+            margin-right 5px
+
+        .shop-list
+          width 100%
+          .shop-li
+            width 100%
+            padding 10px
+            box-sizing border-box
+            height 100px
+            display flex
+            margin-top 10px
+            .right
+              flex 1
+              overflow hidden
+              .pinpai
+                width 100%
+                overflow hidden
+                .bao
+                  float right
+                  margin-top 3px
+                  li
+                    float left
+                    font-size 10px
+                    color #999
+                    padding 0 2px
+                    border 1px solid #f1f1f1
+                    border-radius 2px
+                h4
+                  float left
+                  width 140px
+                  font-size 16px
+                  line-height 16px
+                  font-weight 700
+                  &::before
+                    content '品牌'
+                    font-size 11px
+                    line-height 11px
+                    background-color #ffd930
+                    color #333
+                    display inline-block
+              .money
+                width 100%
+                display flex
+                span
+                  font-size 12px
+                  color #999999
+              .middle
+                width 100%
+                margin-top 18px
+                margin-bottom 10px
+                .middle-left
+                  float left
+                  .num
+                    float left
+                    font-size 10px
+                    color #ff6000
+                    margin-left 4px
+                  .star
+                    overflow hidden
+                    float left
+                    span
+                      float left
+                      width 10px
+                      height 10px
+                      background-size 10px 10px
+                      &.on
+                        bg_image('star_on')
+                      &.half
+                        bg_image('star_half')
+                      &.off
+                        bg_image('star_off')
+                  .yue
+                    float left
+                    font-size 10px
+                    color #666
+                    transform: scale(0.8)
+                .guigu
+                  float right
+                  .zhun
+                    //background-color #02a774
+                    color #02a774
+                    border 1px solid #02a774
+                    transform-origin: 35px 0;
+                    transform: scale(0.7);
+                    display: inline-block;
+                    font-size: 12px;
+                    padding: 1px;
+                    border-radius: 2px;
+
+                  .gui
+                    color: #fff;
+                    margin-right -10px
+                    background-color: #02a774;
+                    border: 1px solid #02a774;
+                    transform-origin: 35px 0;
+                    transform: scale(0.7);
+                    display: inline-block;
+                    font-size: 12px;
+                    padding: 1px;
+                    border-radius: 2px;
+
+
+
+            .left
+              height 80px
+              width 25%
+              padding-right 10px
+              box-sizing border-box
+              img
+                width 100%
+                height 100%
+      .swiper-container
+        padding-top 45px
+        background-color #ffffff
+        width: 100%;
+        height: 200px;
+        .swiper-slide
+          width: 100%;
+          height: 200px;
+          .yinliao
+            width: 100%;
+            height: 200px;
+            li
+              width 25%
+              height 40%
+              float left
+              display flex
+              flex-direction column
+              align-items center
+              justify-content space-around
+              img
+                width 50px
+                height 50px
+
+
+      &.on
+        display block
+    .search-app
+      width 100%
+      .search
+        width 100%
+        .search-title
+          position absolute
+          top 50%
+          left 50%
+          transform:translate(-50%,-50%)
+          color #ffffff
+          font-size 22px
+          text-align center
+      .search-form
+        margin-top 45px
+        background-color #ffffff
+        padding 12px 8px
+        width 100%
+        box-sizing border-box
+        overflow hidden
+        display flex
+        justify-content space-around
+        align-items center
+        .qing
+
+          font-size 14px
+          height: 35px;
+          padding: 0 4px;
+          border-radius: 2px;
+          font-weight: bold;
+          outline: none;
+          border: 4px solid #f2f2f2;
+          color: #333;
+          background-color: #f2f2f2;
+          width 75%
+        .tijiao
+
+          background-color #02a774
+          color #ffffff
+          font-size 20px
+          height: 35px;
+          padding: 0 4px;
+          border-radius: 2px;
+          font-weight: bold;
+          outline: none;
+
+
+    .List
+      width 100%
+      header
+        width 100%
+        span
+          position absolute
+          top 50%
+          left 50%
+          transform:translate(-50%,-50%)
+          color #ffffff
+          font-size 22px
+          text-align center
+
+    .tupian
+      width 60%
+      padding-top 140px
+      margin 0 auto
+      text-align center
+      img
+        width 100%
+        height 30%
+      h3
+        font-size 17px
+        color #6a6a6a
+        padding 10px 0
+      button
+        background-color #02a774
+        font-size 14px
+        color #ffffff
+        padding 10px 20px
+        border-radius 5px
+    .wo
+      width 100%
+      header
+        width 100%
+        span
+          position absolute
+          top 50%
+          left 50%
+          transform:translate(-50%,-50%)
+          color #ffffff
+          font-size 22px
+      .user
+        width 100%
+        background-color #02a774
+        align-items center
+        height 100px
+        padding 66px 10px 20px 10px
+        box-sizing border-box
+        .jiantou
+          float right
+          margin-top 20px
+          color #ffffff
+        .box
+          float left
+          display flex
+          .touxiang
+            border-radius 50%
+            overflow hidden
+            margin-right 10px
+
+            i
+              font-size 62px
+              background-color  #e4e4e4
+          .denglu
+            color #ffffff
+            margin-top 5px
+
+
+            .deng
+              font-size 18px
+              font-weight 700
+              margin-bottom 10px
+            .iphon
+              color #ffffff
+              display flex
+
+              .iconfont
+                font-size 30px
+                margin-left -15px
+              .zan
+                font-size 14px
+                margin-left -10px
+                margin-top 6px
+
+
+
+
+
+      .qian
+        .qian-one
+          width 100%
+          height 80px
+
+          display flex
+          justify-content space-between
+          li
+            background-color #ffffff
+            height 100%
+            width 33%
+            display flex
+            justify-content space-around
+            flex-direction column
+            align-items center
+            p
+
+          .yu-e
+            .ling
+              color #f90
+              font-size 30px
+              font-weight 700
+              line-height 30px
+            .wode
+              font-size 14px
+              font-weight 400
+          .you
+            .ling-ge
+              color #ff5f3e
+              font-size 30px
+              font-weight 700
+              line-height 30px
+            .youhui
+              font-size 14px
+              font-weight 400
+          .jifen
+            .jifen-one
+              color #6ac20b
+              font-size 30px
+              font-weight 700
+              line-height 30px
+            .jifen-two
+              font-size 14px
+              font-weight 400
+
+
+
+
+
+
+  footer
+    position fixed
+    left 0px
+    bottom 0px
+    width 100%
+    height 50px
+    z-index 10
+    background-color #ffffff
+    .list
+      width 100%
+      height 100%
+      top-border-1px(#eee)
+      display flex
+      .fontItem
+        flex 1
+        display flex
+        flex-direction column
+        align-items center
+        justify-content space-around
+        &.active
+          color yellow
+
+
+
+
+
+
+
